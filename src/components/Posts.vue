@@ -25,4 +25,11 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#posts-container {
+	@include flex-responsive;
+	margin: auto;
+	padding: 20px;
+	max-width: 60rem;
+}
+</style>

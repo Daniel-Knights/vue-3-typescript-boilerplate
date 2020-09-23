@@ -1,6 +1,6 @@
 <template>
 	<div class="blog">
-		<h1>BLOG</h1>
+		<h1>VUE3 BLOG</h1>
 		<Posts />
 	</div>
 </template>
@@ -19,5 +19,9 @@ export default {
 .blog {
 	min-height: 100vh;
 	animation: opacity-in 0.5s;
+
+	h1 {
+		padding-top: 40px;
+	}
 }
 </style>

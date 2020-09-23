@@ -36,7 +36,7 @@ export default {
 	@include flex-x(center, center);
 	position: absolute;
 	left: 50px;
-	top: 50px;
+	top: 10px;
 
 	#color-mode {
 		cursor: pointer;
