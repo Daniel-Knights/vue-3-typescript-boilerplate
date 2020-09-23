@@ -1,0 +1,79 @@
+.pages {
+	@include flex-x(space-between, center);
+	margin: 10px auto;
+	width: 300px;
+	user-select: none;
+
+	.disabled-pagination {
+		visibility: hidden;
+	}
+
+	.pagination {
+		cursor: pointer;
+		@include flex-x(center, center);
+		height: 30px;
+		width: 30px;
+		transition: background-color 0.2s;
+
+		&:hover {
+			background-color: rgba(var(--black-rgb), 0.2);
+		}
+	}
+
+	.page-container {
+		display: flex;
+
+		.page,
+		input {
+			@include flex-x(center, center);
+			width: 30px;
+			height: 30px;
+		}
+
+		.selected {
+			color: var(--white);
+			background-color: var(--black);
+		}
+
+		// Page number input
+		.selectable {
+			cursor: pointer;
+			transition: background-color 0.2s;
+
+			&:hover {
+				background-color: rgba(var(--black-rgb), 0.2);
+			}
+		}
+
+		input {
+			outline: none;
+			border-width: 0;
+			text-align: center;
+			color: var(--white);
+			background-color: rgba(var(--black-rgb), 0.9);
+			transition: background-color 0.2s;
+
+			&:focus {
+				background-color: rgba(var(--black-rgb), 0.9);
+			}
+		}
+
+		::placeholder {
+			/* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: rgba(var(--black-rgb), 0.2);
+			opacity: 1; /* Firefox */
+		}
+		:-ms-input-placeholder {
+			/* Internet Explorer 10-11 */
+			color: rgba(var(--black-rgb), 0.2);
+		}
+		::-ms-input-placeholder {
+			/* Microsoft Edge */
+			color: rgba(var(--black-rgb), 0.2);
+		}
+
+		::-webkit-inner-spin-button {
+			appearance: none;
+		}
+	}
+}
