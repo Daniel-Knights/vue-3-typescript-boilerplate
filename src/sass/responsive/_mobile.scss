@@ -22,3 +22,11 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 1000px) {
+	#app {
+		a.go-back {
+			left: 10px;
+		}
+	}
+}

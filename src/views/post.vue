@@ -16,13 +16,11 @@ import router from '@/router';
 export default {
 	name: 'post',
 
-	props: { id: { type: String, required: true } },
-
-	setup(props) {
-		const { id } = toRefs(props);
+	setup() {
+		const { id } = router.currentRoute.value.params;
 		const { loading, selectedPost, fetchSelectedPost } = postsStore();
 
-		fetchSelectedPost({ id });
+		fetchSelectedPost(id);
 
 		return { loading, selectedPost: computed(() => selectedPost.value) };
 	},

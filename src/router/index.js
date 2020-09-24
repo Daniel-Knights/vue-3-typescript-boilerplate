@@ -11,7 +11,6 @@ const routes = [
 		path: '/post/:id/:post',
 		name: 'post',
 		component: () => import(/* webpackChunkName: "post" */ '../views/post.vue'),
-		props: true,
 	},
 ];
 

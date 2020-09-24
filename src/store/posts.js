@@ -16,9 +16,9 @@ export default function postsStore() {
 			});
 	}
 
-	async function fetchSelectedPost(params) {
+	async function fetchSelectedPost(id) {
 		loading.value = true;
-		await Axios.get(`http://jsonplaceholder.typicode.com/posts/${params.id.value}`)
+		await Axios.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
 			.then(res => {
 				selectedPost.value = res.data;
 				loading.value = false;
