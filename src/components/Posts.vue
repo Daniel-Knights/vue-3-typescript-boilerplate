@@ -16,11 +16,11 @@ export default {
 	components: { Post },
 
 	setup() {
-		const { loading, posts, fetchPosts } = postsStore();
+		const { posts, fetchPosts } = postsStore();
 
 		fetchPosts();
 
-		return { loading, posts: computed(() => posts.value) };
+		return { posts: computed(() => posts.value) };
 	},
 };
 </script>

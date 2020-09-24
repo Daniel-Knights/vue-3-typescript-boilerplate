@@ -1,5 +1,7 @@
 <template>
-	<div id="footer">&copy;Daniel Knights | {{ new Date().getFullYear() }}</div>
+	<div id="footer">
+		<small>&copy;Daniel Knights | {{ new Date().getFullYear() }}</small>
+	</div>
 </template>
 
 <script>

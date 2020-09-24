@@ -2,6 +2,9 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
-createApp(App)
+const app = createApp(App)
 	.use(router)
 	.mount('#app');
+
+// Global properties
+app.$appName = 'Vue3';

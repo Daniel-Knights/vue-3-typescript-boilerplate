@@ -1,5 +1,5 @@
 <template>
-	<div class="blog">
+	<div id="blog">
 		<h1>VUE3 BLOG</h1>
 		<Posts />
 	</div>
@@ -16,12 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-.blog {
-	min-height: 100vh;
+#blog {
 	animation: opacity-in 0.5s;
-
-	h1 {
-		padding-top: 40px;
-	}
 }
 </style>

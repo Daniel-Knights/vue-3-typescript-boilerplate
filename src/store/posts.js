@@ -7,15 +7,12 @@ const selectedPost = ref({});
 
 export default function postsStore() {
 	async function fetchPosts() {
-		loading.value = true;
 		await Axios.get('http://jsonplaceholder.typicode.com/posts')
 			.then(res => {
 				posts.value = res.data;
-				loading.value = false;
 			})
 			.catch(err => {
 				console.log(err);
-				loading.value = false;
 			});
 	}
 

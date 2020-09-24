@@ -12,13 +12,6 @@ const routes = [
 		name: 'post',
 		component: () => import(/* webpackChunkName: "post" */ '../views/post.vue'),
 		props: true,
-		children: [
-			{
-				path: 'comments',
-				name: 'comments',
-				component: () => import(/* webpackChunkName: "comments" */ '../views/comments.vue'),
-			},
-		],
 	},
 ];
 

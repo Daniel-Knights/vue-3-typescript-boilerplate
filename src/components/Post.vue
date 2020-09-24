@@ -38,12 +38,13 @@ export default {
 	height: 200px;
 	text-align: left;
 	border-radius: 10px;
-	color: $white;
-	background: rgba($black, 0.5);
+	color: var(--black);
+	background: rgba(var(--primary-rgb), 0.5);
 	box-shadow: 0 0 10px -8px var(--black);
 	backdrop-filter: blur(5px);
 	overflow: hidden;
-	transition: all 0.25s;
+	transition: box-shadow 0.25s;
+	animation: opacity-in 0.25s;
 
 	* {
 		padding: 10px;
@@ -55,12 +56,11 @@ export default {
 		bottom: 0;
 		height: 90px;
 		width: 100%;
-		background: linear-gradient(to bottom, transparent, $black 50%);
+		background: linear-gradient(to bottom, transparent, var(--primary) 50%);
 	}
 
 	&:hover {
 		box-shadow: 0 0 15px -5px var(--black);
-		transform: scale3d(1.025, 1.025, 1);
 	}
 }
 </style>

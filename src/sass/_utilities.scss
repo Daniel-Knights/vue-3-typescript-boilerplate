@@ -1,9 +1,11 @@
 /* Utility classes */
 
 .container {
-	max-width: 730px;
-	margin: 0 auto;
 	position: relative;
+	margin: 0 auto;
+	padding-top: 60px;
+	max-width: 1000px;
+	min-height: 100vh;
 }
 
 .reverse-selection::selection {
@@ -13,6 +15,7 @@
 
 /* Defaults */
 
+h1,
 h2,
 h3,
 h4,
