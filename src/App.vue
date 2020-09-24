@@ -1,13 +1,13 @@
 <template>
-	<transition name="loading">
-		<Loading v-if="loading" />
-	</transition>
-	<Background />
-	<Toggle />
-	<div class="container">
-		<router-view />
-	</div>
-	<Footer />
+    <transition name="loading">
+        <Loading v-if="loading" />
+    </transition>
+    <Background />
+    <Toggle />
+    <div class="container">
+        <router-view />
+    </div>
+    <Footer />
 </template>
 
 <script>
@@ -19,27 +19,27 @@ import Toggle from '@/components/Toggle.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
-	name: 'App',
+    name: 'App',
 
-	components: { Loading, Background, Toggle, Footer },
+    components: { Loading, Background, Toggle, Footer },
 
-	setup() {
-		const loading = ref(true);
+    setup() {
+        const loading = ref(true);
 
-		window.addEventListener('load', () => {
-			loading.value = false;
-			document.querySelector('body').style.overflow = 'visible';
-		});
+        window.addEventListener('load', () => {
+            loading.value = false;
+            document.querySelector('body').style.overflow = 'visible';
+        });
 
-		return { loading };
-	},
+        return { loading };
+    },
 };
 </script>
 
 <style lang="scss">
 .loading-leave-active,
 .loading-leave-to {
-	opacity: 0;
-	transition: opacity 0.25s;
+    opacity: 0;
+    transition: opacity 0.25s;
 }
 </style>

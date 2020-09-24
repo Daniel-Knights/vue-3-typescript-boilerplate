@@ -1,16 +1,16 @@
 /* Utility classes */
 
 .container {
-	position: relative;
-	margin: 0 auto;
-	padding-top: 60px;
-	max-width: 1000px;
-	min-height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 60px;
+    max-width: 1000px;
+    min-height: 100vh;
 }
 
 .reverse-selection::selection {
-	color: var(--black);
-	background-color: var(--white);
+    color: var(--black);
+    background-color: var(--white);
 }
 
 /* Defaults */
@@ -20,51 +20,51 @@ h2,
 h3,
 h4,
 h5 {
-	margin: 0;
+    margin: 0;
 }
 
 p {
-	white-space: pre-line;
-	hyphens: auto;
+    white-space: pre-line;
+    hyphens: auto;
 }
 
 span {
-	display: block;
+    display: block;
 }
 
 a {
-	color: var(--black);
-	text-decoration: none;
+    color: var(--black);
+    text-decoration: none;
 }
 
 button:not([type='button']) {
-	cursor: pointer;
-	width: 15rem;
-	height: 2rem;
-	border: none;
-	border-radius: 3px;
-	color: var(--white);
-	background-color: var(--primary);
-	transition: background-color 0.1s;
-	outline: none;
+    cursor: pointer;
+    width: 15rem;
+    height: 2rem;
+    border: none;
+    border-radius: 3px;
+    color: var(--white);
+    background-color: var(--primary);
+    transition: background-color 0.1s;
+    outline: none;
 }
 
 input,
 textarea {
-	outline: none;
-	border: none;
-	resize: none;
-	border: 1px solid transparent;
+    outline: none;
+    border: none;
+    resize: none;
+    border: 1px solid transparent;
 }
 
 ::selection {
-	color: var(--white);
-	background-color: var(--black);
+    color: var(--white);
+    background-color: var(--black);
 }
 
 button:hover {
-	background-color: rgba(var(--black-rgb), 0.7);
+    background-color: rgba(var(--black-rgb), 0.7);
 }
 button:active {
-	transform: scale(0.99);
+    transform: scale(0.99);
 }

@@ -6,35 +6,35 @@ const posts = ref([]);
 const selectedPost = ref({});
 
 export default function postsStore() {
-	async function fetchPosts() {
-		await Axios.get('http://jsonplaceholder.typicode.com/posts')
-			.then(res => {
-				posts.value = res.data;
-			})
-			.catch(err => {
-				console.log(err);
-			});
-	}
+    async function fetchPosts() {
+        await Axios.get('http://jsonplaceholder.typicode.com/posts')
+            .then(res => {
+                posts.value = res.data;
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
 
-	async function fetchSelectedPost(id) {
-		loading.value = true;
-		await Axios.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
-			.then(res => {
-				selectedPost.value = res.data;
-				loading.value = false;
-			})
-			.catch(err => {
-				console.log(err);
-				loading.value = false;
-			});
-	}
+    async function fetchSelectedPost(id) {
+        loading.value = true;
+        await Axios.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
+            .then(res => {
+                selectedPost.value = res.data;
+                loading.value = false;
+            })
+            .catch(err => {
+                console.log(err);
+                loading.value = false;
+            });
+    }
 
-	return {
-		loading: computed(() => loading.value),
-		posts: computed(() => posts.value),
-		selectedPost: computed(() => selectedPost.value),
+    return {
+        loading: computed(() => loading.value),
+        posts: computed(() => posts.value),
+        selectedPost: computed(() => selectedPost.value),
 
-		fetchPosts,
-		fetchSelectedPost,
-	};
+        fetchPosts,
+        fetchSelectedPost,
+    };
 }
