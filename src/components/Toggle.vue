@@ -1,7 +1,7 @@
 <template>
     <div id="color-mode-container">
-        <i class="far fa-sun" v-show="darkModeEnabled"></i>
-        <i class="fa fa-moon" v-show="!darkModeEnabled"></i>
+        <i class="far fa-sun" v-show="!darkModeEnabled"></i>
+        <i class="fa fa-moon" v-show="darkModeEnabled"></i>
         <div @click="darkMode()" id="color-mode">
             <div id="color-mode-toggle" :class="{ 'dark-mode-enabled': darkModeEnabled }"></div>
         </div>
@@ -15,7 +15,14 @@ export default {
 
     setup() {
         const html = document.querySelector('html');
+        const prefers = window.matchMedia('(prefers-color-scheme: dark)');
         let darkModeEnabled = ref(false);
+
+        if (prefers.matches) {
+            html.dataset.mode = 'dark';
+            darkModeEnabled.value = true;
+        }
+
         const darkMode = () => {
             if (html.dataset.mode === 'dark') {
                 html.dataset.mode = 'light';
