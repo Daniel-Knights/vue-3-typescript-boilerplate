@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { computed, onMounted, toRefs } from 'vue';
+import { computed, toRefs, watch } from 'vue';
 import postsStore from '@/store/posts';
 import router from '@/router';
 
@@ -22,7 +22,10 @@ export default {
 
         fetchSelectedPost(id);
 
-        onMounted(() => (document.title = `${selectedPost.value.title} | Vue3 Blog`));
+        watch(selectedPost, () => {
+            if (selectedPost.value.title)
+                document.title = `${selectedPost.value.title} | Vue3 Blog`;
+        });
 
         return { loading, selectedPost: computed(() => selectedPost.value) };
     },
