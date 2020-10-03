@@ -14,7 +14,7 @@ import postsStore from '@/store/posts';
 import router from '@/router';
 
 export default {
-    name: 'post',
+    name: 'Post',
 
     setup() {
         const { id } = router.currentRoute.value.params;

@@ -1,17 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import blog from '../views/blog.vue';
+import Blog from '../views/Blog.vue';
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
     {
         path: '/',
         name: 'blog',
-        component: blog,
+        component: Blog,
     },
     {
         path: '/post/:id/:post',
         name: 'post',
-        component: () => import(/* webpackChunkName: "post" */ '../views/post.vue'),
+        component: () => import(/* webpackChunkName: "post" */ '../views/Post.vue'),
     },
+    { path: '/:pathMatch(.*)', component: NotFound },
 ];
 
 const router = createRouter({
