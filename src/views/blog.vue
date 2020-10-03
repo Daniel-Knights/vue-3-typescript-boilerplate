@@ -12,6 +12,10 @@ export default {
     name: 'Blog',
 
     components: { Posts },
+
+    setup() {
+        document.title = 'Home | Vue3 Blog';
+    },
 };
 </script>
 

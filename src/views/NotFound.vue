@@ -7,6 +7,10 @@
 <script>
 export default {
     name: 'NotFound',
+
+    setup() {
+        document.title = 'Page Not Found | Vue3 Blog';
+    },
 };
 </script>
 

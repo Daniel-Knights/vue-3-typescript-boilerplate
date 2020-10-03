@@ -45,6 +45,7 @@ export default {
     position: absolute;
     left: 50px;
     top: 40px;
+    z-index: 1;
 
     #color-mode {
         cursor: pointer;

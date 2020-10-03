@@ -21,6 +21,9 @@ export default {
         const { loading, selectedPost, fetchSelectedPost } = postsStore();
 
         fetchSelectedPost(id);
+        console.log(selectedPost.value);
+
+        document.title = `${selectedPost.value.title} | Vue3 Blog`;
 
         return { loading, selectedPost: computed(() => selectedPost.value) };
     },
