@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Blog from '../views/Blog.vue';
-import NotFound from '../views/NotFound.vue';
+import Blog from '../views/blog.vue';
+import NotFound from '../views/404.vue';
 
 const routes = [
     {
@@ -11,7 +11,7 @@ const routes = [
     {
         path: '/post/:id/:post',
         name: 'post',
-        component: () => import(/* webpackChunkName: "post" */ '../views/Post.vue'),
+        component: () => import(/* webpackChunkName: "post" */ '../views/post.vue'),
     },
     { path: '/:pathMatch(.*)', component: NotFound },
 ];

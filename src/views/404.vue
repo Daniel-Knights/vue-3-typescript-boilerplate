@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'NotFound',
+    name: '404',
 
     setup() {
         document.title = 'Page Not Found | Vue3 Blog';
