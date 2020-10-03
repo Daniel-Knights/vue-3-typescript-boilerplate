@@ -7,7 +7,7 @@ const selectedPost = ref({});
 
 export default function postsStore() {
     async function fetchPosts() {
-        await Axios.get('http://jsonplaceholder.typicode.com/posts')
+        await Axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(res => {
                 posts.value = res.data;
             })
@@ -18,7 +18,7 @@ export default function postsStore() {
 
     async function fetchSelectedPost(id) {
         loading.value = true;
-        await Axios.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
+        await Axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .then(res => {
                 selectedPost.value = res.data;
                 loading.value = false;
