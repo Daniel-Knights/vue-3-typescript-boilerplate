@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { computed, toRefs, watch } from 'vue';
+import { computed, watch } from 'vue';
 import postsStore from '@/store/posts';
 import router from '@/router';
 

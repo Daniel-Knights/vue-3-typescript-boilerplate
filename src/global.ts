@@ -1,4 +1,4 @@
 // Global variables
-export default global = {
+export default {
     appName: 'Vue3',
 };

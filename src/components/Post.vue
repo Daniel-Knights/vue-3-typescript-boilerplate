@@ -24,7 +24,7 @@ export default {
         const { post } = toRefs(props);
         const postUrl = post.value.title.split(' ').join('-');
 
-        return { post, postUrl };
+        return { postUrl };
     },
 };
 </script>

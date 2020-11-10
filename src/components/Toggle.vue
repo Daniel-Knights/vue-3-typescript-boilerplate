@@ -17,7 +17,7 @@ export default {
     setup() {
         const html = document.querySelector('html');
         const prefers = window.matchMedia('(prefers-color-scheme: dark)');
-        let darkModeEnabled = ref(false);
+        const darkModeEnabled = ref(false);
 
         if (prefers.matches) {
             html.dataset.mode = 'dark';

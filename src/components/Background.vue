@@ -5,6 +5,7 @@
 
 <script>
 import { onMounted, ref } from 'vue';
+import gsap from 'gsap';
 
 export default {
     name: 'Background',
