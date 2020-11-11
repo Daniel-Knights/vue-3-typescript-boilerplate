@@ -13,10 +13,10 @@
 </template>
 
 <script lang="ts">
-import { PropType, toRefs } from 'vue';
+import { defineComponent, PropType, toRefs } from 'vue';
 import { Post } from '@/types';
 
-export default {
+export default defineComponent({
     name: 'Post',
 
     props: {
@@ -32,7 +32,7 @@ export default {
 
         return { postUrl };
     },
-};
+});
 </script>
 
 <style lang="scss">
