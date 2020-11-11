@@ -1,4 +1,4 @@
-**A lightweight boilerplate setup for Vue3**
+**A lightweight boilerplate setup for Vue 3**
 
 -   Includes TypeScript, Axios, [Greensock](https://greensock.com/docs/v3) and [Polyfill.io](https://polyfill.io/v3/).
 
