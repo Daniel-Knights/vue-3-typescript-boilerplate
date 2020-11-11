@@ -10,7 +10,7 @@
     <Footer />
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from 'vue';
 
 import Loading from '@/components/Loading.vue';
@@ -27,8 +27,11 @@ export default {
         const loading = ref(true);
 
         window.addEventListener('load', () => {
+            const body = document.querySelector('body');
+
             loading.value = false;
-            document.querySelector('body').style.overflow = 'visible';
+
+            if (body) body.style.overflow = 'visible';
         });
 
         return { loading };

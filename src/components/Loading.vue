@@ -17,12 +17,14 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
     name: 'Loading',
 
     setup() {
-        document.querySelector('body').style.overflow = 'hidden';
+        const body = document.querySelector('body');
+
+        if (body) body.style.overflow = 'hidden';
     },
 };
 </script>

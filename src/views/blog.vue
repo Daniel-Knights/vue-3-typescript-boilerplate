@@ -5,7 +5,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import Posts from '@/components/Posts.vue';
 
 export default {

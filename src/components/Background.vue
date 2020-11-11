@@ -3,7 +3,7 @@
     <img ref="imgTwo" src="@/assets/svg/slice.svg" />
 </template>
 
-<script>
+<script lang="ts">
 import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
 

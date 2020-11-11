@@ -8,7 +8,7 @@
     >
 </template>
 
-<script>
+<script lang="ts">
 import { computed, watch } from 'vue';
 import postsStore from '@/store/posts';
 import router from '@/router';
@@ -20,7 +20,7 @@ export default {
         const { id } = router.currentRoute.value.params;
         const { loading, selectedPost, fetchSelectedPost } = postsStore();
 
-        fetchSelectedPost(id);
+        fetchSelectedPost(String(id));
 
         watch(selectedPost, () => {
             if (selectedPost.value.title)

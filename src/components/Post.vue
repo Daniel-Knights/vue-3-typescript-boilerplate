@@ -12,13 +12,19 @@
     </router-link>
 </template>
 
-<script>
-import { toRefs } from 'vue';
+<script lang="ts">
+import { PropType, toRefs } from 'vue';
+import { Post } from '@/types';
 
 export default {
     name: 'Post',
 
-    props: { post: { type: Object, required: true } },
+    props: {
+        post: {
+            type: Object as PropType<Post>,
+            required: true,
+        },
+    },
 
     setup(props) {
         const { post } = toRefs(props);

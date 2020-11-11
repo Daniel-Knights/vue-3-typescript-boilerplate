@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from 'vue';
 
 export default {
@@ -18,6 +18,8 @@ export default {
         const html = document.querySelector('html');
         const prefers = window.matchMedia('(prefers-color-scheme: dark)');
         const darkModeEnabled = ref(false);
+
+        if (!html) return;
 
         if (prefers.matches) {
             html.dataset.mode = 'dark';

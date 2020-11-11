@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import { computed } from 'vue';
 import postsStore from '@/store/posts';
 

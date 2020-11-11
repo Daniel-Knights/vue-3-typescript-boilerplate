@@ -1,9 +1,10 @@
 import { ref, computed } from 'vue';
 import Axios from 'axios';
+import { Post } from '@/types';
 
-const loading = ref(false);
-const posts = ref([]);
-const selectedPost = ref({});
+const loading = ref<boolean>(false);
+const posts = ref<object[]>([]);
+const selectedPost = ref<Post>({ title: '', text: '' });
 
 export default function postsStore() {
     async function fetchPosts() {
@@ -18,6 +19,7 @@ export default function postsStore() {
 
     async function fetchSelectedPost(id: string) {
         loading.value = true;
+
         await Axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .then(res => {
                 selectedPost.value = res.data;
