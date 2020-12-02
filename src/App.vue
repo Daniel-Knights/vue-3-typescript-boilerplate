@@ -11,14 +11,14 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 import Loading from '@/components/Loading.vue';
 import Background from '@/components/Background.vue';
 import Toggle from '@/components/Toggle.vue';
 import Footer from '@/components/Footer.vue';
 
-export default {
+export default defineComponent({
     name: 'App',
 
     components: { Loading, Background, Toggle, Footer },
@@ -36,7 +36,7 @@ export default {
 
         return { loading };
     },
-};
+});
 </script>
 
 <style lang="scss">

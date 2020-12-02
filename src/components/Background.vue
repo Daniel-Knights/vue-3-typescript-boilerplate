@@ -4,10 +4,10 @@
 </template>
 
 <script lang="ts">
-import { onMounted, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 import gsap from 'gsap';
 
-export default {
+export default defineComponent({
     name: 'Background',
 
     setup() {
@@ -25,7 +25,7 @@ export default {
 
         return { imgOne, imgTwo };
     },
-};
+});
 </script>
 
 <style lang="scss">

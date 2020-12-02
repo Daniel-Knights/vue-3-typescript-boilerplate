@@ -6,9 +6,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import Posts from '@/components/Posts.vue';
 
-export default {
+export default defineComponent({
     name: 'blog',
 
     components: { Posts },
@@ -16,7 +17,7 @@ export default {
     setup() {
         document.title = 'Home | Vue3 Blog';
     },
-};
+});
 </script>
 
 <style lang="scss">

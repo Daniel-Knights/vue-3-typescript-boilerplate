@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue';
+import { computed, defineComponent } from 'vue';
 import postsStore from '@/store/posts';
 
 import Post from '@/components/Post.vue';
 
-export default {
+export default defineComponent({
     name: 'Posts',
 
     components: { Post },
@@ -22,7 +22,7 @@ export default {
 
         return { posts: computed(() => posts.value) };
     },
-};
+});
 </script>
 
 <style lang="scss">

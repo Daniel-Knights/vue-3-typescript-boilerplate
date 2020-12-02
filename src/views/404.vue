@@ -5,13 +5,15 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: '404',
 
     setup() {
         document.title = 'Page Not Found | Vue3 Blog';
     },
-};
+});
 </script>
 
 <style lang="scss">

@@ -9,9 +9,9 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 
-export default {
+export default defineComponent({
     name: 'Toggle',
 
     setup() {
@@ -38,7 +38,7 @@ export default {
 
         return { darkModeEnabled, darkMode };
     },
-};
+});
 </script>
 
 <style lang="scss">

@@ -9,11 +9,11 @@
 </template>
 
 <script lang="ts">
-import { computed, watch } from 'vue';
+import { computed, defineComponent, watch } from 'vue';
 import postsStore from '@/store/posts';
 import router from '@/router';
 
-export default {
+export default defineComponent({
     name: 'post',
 
     setup() {
@@ -29,7 +29,7 @@ export default {
 
         return { loading, selectedPost: computed(() => selectedPost.value) };
     },
-};
+});
 </script>
 
 <style lang="scss">

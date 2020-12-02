@@ -18,7 +18,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: 'Loading',
 
     setup() {
@@ -26,7 +28,7 @@ export default {
 
         if (body) body.style.overflow = 'hidden';
     },
-};
+});
 </script>
 
 <style lang="scss">
